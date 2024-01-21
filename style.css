@@ -1,0 +1,370 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+    --large-text: 48px;
+    --medium-text: 24px;
+    --small-text: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    transition: all 0.5s ease;
+}
+
+/* Global Styles */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+/* Main Section Styles */
+.main {
+    background-image: url(./assets/images/background-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: max(1200px, 100vw);
+    height: 95vh;
+    position: relative;
+}
+
+/* Background Overlay */
+.box {
+    height: 100%;
+    width: 100%;
+    opacity: 0.64;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    max-width: 80vw;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+nav img {
+    width: 150px;
+    position: relative;
+    z-index: 10;
+}
+
+nav .nav-options {
+    z-index: 10;
+}
+
+/* Hero Section Styles */
+.hero {
+    height: calc(100% - 90px);
+    max-width: 80vw;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    text-align: center;
+    gap: 23px;
+}
+
+.hero > :nth-child(1) {
+    font-size: var(--large-text);
+    font-weight: 900;
+}
+
+.hero > :nth-child(2) {
+    font-size: var(--medium-text);
+}
+
+.hero > :nth-child(3) {
+    font-size: var(--small-text);
+}
+
+/* Call to Action Styles */
+.cta {
+    display: flex;
+    gap: 10px;
+}
+
+.cta input {
+    width: 25vw;
+    padding: 15px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.491);
+    border-radius: 5px;
+    border: 1px solid gray;
+    color: white;
+}
+
+.btn {
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+.btn:hover {
+    background-color: rgb(154, 4, 4);
+}
+
+.cta .btn {
+    font-size: var(--medium-text);
+    padding: 15px;
+}
+
+/* Navigation Options Styles */
+.nav-options {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-options select {
+    background-color: rgba(0, 0, 0, 0.696);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.nav-options .btn {
+    font-size: smaller;
+    padding: 12px;
+}
+
+/* Section Separation Line Styles */
+.separation {
+    background-color: rgb(36, 36, 36);
+    height: 7px;
+}
+
+/* Section Styles */
+.first,
+.second {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80vw;
+    margin: auto;
+    color: white;
+    padding: 15px;
+}
+
+.second{
+    flex-direction: row-reverse;
+}
+
+/* Image and Video Styles */
+.sec-img {
+    position: relative;
+}
+
+.sec-img img {
+    width: 30vw;
+}
+
+.sec-img video {
+    position: absolute;
+    top: 67px;
+    right: 61px;
+    width: 22vw;
+    z-index: -1;
+}
+
+.sec-img [src="./assets/videos/video2.m4v"]{
+    top: 38px;
+    right: 82px;
+    width: 19vw;
+}
+
+.first > div :first-child,
+.second > div :first-child {
+    font-size: var(--large-text);
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.first > div :last-child,
+.second > div :last-child {
+    font-size: var(--medium-text);
+}
+
+/* FAQ Section Styles */
+.faq {
+    text-align: center;
+    color: white;
+    max-width: 80vw;
+    padding: 15px;
+    margin: auto;
+}
+
+.faq h2 {
+    font-size: var(--large-text);
+    font-weight: 900;
+}
+
+.faq-box {
+    display: flex;
+    padding: 25px;
+    background-color: rgb(35, 35, 35);
+    font-size: var(--medium-text);
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.faq-box:hover {
+    cursor: pointer;
+    background-color: rgb(88, 88, 88);
+}
+
+.faq p {
+    font-size: var(--small-text);
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.faq .cta {
+    justify-content: center;
+}
+
+/* Footer Styles */
+footer {
+    max-width: 90vw;
+    margin: 50px auto;
+    color: rgb(160, 160, 160);
+    font-size: 16px;
+    padding: 25px;
+}
+
+footer a {
+    color: rgb(160, 160, 160);
+    font-size: 14px;
+}
+
+footer a:active {
+    color: red;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+footer select {
+    background-color: rgba(0, 0, 0, 0.696);
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 25px 0;
+    padding: 10px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 1024px) {
+    .sec-img video{
+        width: 22vw;
+        top: 46px;
+        right: 40px;
+    }
+
+    .sec-img [src="./assets/videos/video2.m4v"]{
+        top: 33px;
+        right: 58px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --large-text: 32px;
+        --medium-text: 18px;
+        --small-text: 18px;
+    }
+
+    .first,
+    .second {
+        flex-direction: column;
+        text-align: center;
+        width: 90vw;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cta input {
+        width: 50vw;
+    }
+
+    .sec-img img {
+        width: 80vw;
+    }
+
+    .sec-img video{
+        width: 65vw;
+    }
+
+    .sec-img [src="./assets/videos/video2.m4v"]{
+        top: 36px;
+        right: 118px;
+        width: 51vw;
+    }
+
+    nav img {
+        width: 90px;
+    }
+}
+
+
+@media only screen and (max-width:430px) {
+    .cta{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta input {
+        width: 90vw
+    }
+
+    .sec-img video{
+        width: 61vw;
+        top: 46px;
+        right: 36px
+    }
+
+    .sec-img [src="./assets/videos/video2.m4v"]{
+        top: 20px;
+        right: 58px;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .sec-img video{
+        top: 40px;
+        right: 28px;
+    }
+
+    .sec-img [src="./assets/videos/video2.m4v"]{
+        top: 15px;
+        right: 46px;
+    }
+}
