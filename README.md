@@ -3,8 +3,6 @@
 ## Overview
 
 This project is a Netflix clone created using HTML and CSS. It aims to replicate the basic structure and styling of the Netflix website, allowing users to explore various sections, watch promotional videos, and learn more about the streaming service.
-MyTasks is a simple command-line task manager written in JavaScript. This application allows you to add, list, complete, and remove tasks, providing you with a straightforward way to keep track of your to-do list.
-
 
 ## Live Demo
 
